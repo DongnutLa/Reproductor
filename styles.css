@@ -1,0 +1,129 @@
+:root {
+    --back: #191c1b;
+    --text: #dbdbdb;
+    --gray: #606664;
+    --soft-gray: #c4c4c4;
+    --hard-gray: #191c1b;
+}
+
+body {
+    margin: 0;
+    background-color: var(--back);
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 60px 300px 160px auto;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    color: var(--text);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cards {
+    /*display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 500px));*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards div {
+    position: relative;
+    scroll-snap-align: center;
+    min-width: 250px;
+    height: 250px;
+    margin: 0 20px;
+    box-shadow:  5px 5px 10px var(--hard-gray),
+             -5px -5px 10px var(--soft-gray);
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cards .card-1 {
+    background-image: url('./assets/img/iriwaPF.jpg');
+}
+
+.cards .card-2 {
+    background-image: url('./assets/img/poisonPF.jpg');
+}
+
+.cards .card-3 {
+    background-image: url('./assets/img/fantasyPF.jpg');
+}
+
+
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.progress-bar p {
+    color: var(--text);
+    margin: 5px auto;
+}
+
+.progress-bar .song {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.progress-bar .artist {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.progress-bar .progress-contain {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.progress-contain .progress-contain__text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.progress-contain span {
+    color: var(--soft-gray);
+    font-size: 10px;
+}
+
+.buttons {
+    align-self: start;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow:  2px 2px 8px var(--soft-gray);
+}
+
+.buttons .button-item-3 {
+    width: 70px;
+}
